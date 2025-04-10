@@ -53,7 +53,7 @@ p{
     }
 }
 
-
+/*Links*/
 
 a{
     text-decoration: none;
@@ -75,5 +75,66 @@ a{
 @media screen and (min-width:1024px){
     .link-arrow{
         font-size: 1.5rem;
+    }
+}
+
+
+
+/*Badges*/
+.badge{
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight:600;
+    white-space: nowrap;   /*винаги да излиза на един ред, да не излиза от баджа*/
+    font-size: 2rem;
+}
+
+.badge--primary{
+    background-color: var(--color-primary);
+    color: white;
+}
+.badge--secondary{
+    background-color: var(--color-secondary);
+    color:white;
+}
+.badge--small{
+    font-size: 1.6rem;
+}
+
+
+@media screen and (min-width:1024px){
+    .badge{
+        font-size: 1.5rem;
+    }
+    .badge--small{
+        font-size:1.2rem;
+    }
+}
+
+
+
+/*Lists*/
+.list{
+    list-style: none;
+    padding-left:0;
+    color:var(--color-headings);
+    font-size:bold;
+}
+.list--inline .list__inline{
+    display:inline-block;   /*да са на един ред, но да мога да слагам margin*/
+    margin-right: 2rem;
+}
+.list--tick{
+    list-style-image: url(../images/tick.svg);   /*отивам едно ниво по-нагоре, и слагам тикче като bullet*/
+    padding-left: 3rem;
+}
+.list--tick .list__item{
+    padding-left: 0.5rem;   /*прави padding при предмет от лист, който има тикче*/
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:1024px){
+    .list--tick .list__item{
+        padding-left:0;
     }
 }
